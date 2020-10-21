@@ -2,10 +2,11 @@ import React, { Component, useState, useEffect } from 'react';
 import './App.css';
 import Btc from './btc/Btc';
 import Usd from './btc/USD';
-
+import bitcoin from './bitcoin.png';
 
 function App() {
   const [price, setPrice] = useState(0)
+  const [speed, setspeed] = useState(5)
   const [USDprice, setUSDprice] = useState(1)
   const [cryptos, setCryptos] = useState([])
   const [amount, setAmount] = useState(1)
@@ -57,12 +58,14 @@ else{
   return (
     <div className="main">
       
-      <h1>Live BTC Price</h1>
+  <h1>The current value of Bitcoin is  {`  $${price}`}</h1>
+  <h2 >Still working on the math below...check back soon</h2>
+  <img style={{animation: `spin ${speed}s linear infinite`}} src={bitcoin} alt="bitcoin" width="150px" />;
       
       <Usd
       name="USD" 
       price={price} 
-      onChangeAmount = {handleFromAmountChange}
+      //onChangeAmount = {handleFromAmountChange}
       amount={fromAmount}
       />
 
@@ -71,7 +74,7 @@ else{
       <Btc 
       name="BTC" 
       price={USDprice} 
-      onChangeAmount = {handleToAmountChange}
+      //onChangeAmount = {handleToAmountChange}
       amount={toAmount}
       />
       
