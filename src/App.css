@@ -12,12 +12,19 @@ h1{
   margin: 0px;
   margin-bottom: 0.5rem;
   
+  
 }
 h2{
   color: white;
   margin: 0px;
   margin-bottom: 0.5rem;
-  
+  padding-top: 20px;
+}
+h5{
+  color: white;
+  margin: 0px;
+  margin-bottom: 0.5rem;
+  padding-top: 20px;
 }
 .input{
   border: 1px solid;

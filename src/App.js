@@ -58,8 +58,9 @@ else{
   return (
     <div className="main">
       
-  <h1>The current value of Bitcoin is  {`  $${price}`}</h1>
-  <h2 >Still working on the math below...check back soon</h2>
+  <h1>The current price of Bitcoin is  {`  $${price.toFixed(2)}`}</h1>
+  
+  <h5>Time is the ultimate luxury...HODL 4 Life</h5>
   <img style={{animation: `spin ${speed}s linear infinite`}} src={bitcoin} alt="bitcoin" width="150px" />;
       
       <Usd
