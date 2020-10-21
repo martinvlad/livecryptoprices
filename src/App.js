@@ -6,7 +6,7 @@ import Usd from './btc/USD';
 
 function App() {
   const [price, setPrice] = useState(0)
-  
+  const [USDprice, setUSDprice] = useState(1)
   const [cryptos, setCryptos] = useState([])
   const mainurl = 'https://api.coindesk.com/v1/bpi/currentprice.json';
   
@@ -14,20 +14,22 @@ function App() {
     fetch(mainurl)
     .then(res => res.json())
     .then(data =>{  
+      console.log(data)
       const USDprice = data.bpi.USD.rate_float;
-      console.log(USDprice)
+      
       setPrice(USDprice)
+      
     })
-      //setPrice(USDprice);
+      
       
     }, [])
-  
+    console.log(price)
   return (
     <div className="main">
       
       <h1>Live Crypto Prices</h1>
       
-      <Usd name="USD" price={price}/><h1>   =   </h1><Btc name="BTC"/>
+      <Usd name="USD" price={USDprice}/><h1>   =   </h1><Btc name="BTC" price={price}/>
       
     </div>
   );
