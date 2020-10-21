@@ -8,7 +8,7 @@ export default function Btc(props) {
     
     return (
         <div>
-            <input type="number" pattern="[0-9]*"className="input" value={price} />
+            <input type="number" pattern="[0-9]*"className="input" value={price}  />
             <select id="mySelect"value={crypto} key={crypto} >
             {arrayofprices.map(crypto =>(
                     <option key={crypto} value ={crypto}>{crypto}</option>
