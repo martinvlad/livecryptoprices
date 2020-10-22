@@ -43,3 +43,13 @@ select{
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}
 }
+.box{
+  padding-top: 20px;
+  margin-top: 20px;
+  border: 7px solid #D2691E;
+  padding-bottom: 20px;
+  margin-left: 170px;
+  height: 100px;
+  width: 40%;
+  align-items: center;
+}
