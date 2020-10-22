@@ -11,7 +11,7 @@ export default function USD(props) {
 
     return (
         <div>
-            <input type="number" pattern="[0-9]*"className="input"  value={amount} onChange ={onChangeAmount} />
+            <input type="number" pattern="[0-9]*"className="input"  value={amount.toFixed(2)} onChange ={onChangeAmount} />
             <select value='USD' key="USD">
             {<option>{base}</option>}
                
