@@ -6,7 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 import bitcoin from './bitcoin.png';
 
-const options = [{value: "USD", text: "USD"},{value: "EUR", text: "EUR"},{value: "GBP", text: "GBP"} ]
+const options = [{value: "USD", text: "USD", symbol:"$"},{value: "EUR", text: "EUR", symbol: "€"},{value: "GBP", text: "GBP", symbol: ""} ]
 
 function App() {
   
@@ -42,7 +42,9 @@ function App() {
      const res = await fetch("https://api.coindesk.com/v1/bpi/historical/close.json")
      const data = await res.json();
      const categories = Object.keys(data.bpi);
+     console.log(categories)
      const series = Object.values(data.bpi);
+     console.log(series)
      setChartData({
        xaxis: {
          categories: categories
