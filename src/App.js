@@ -48,12 +48,40 @@ function App() {
      setChartData({
        xaxis: {
          categories: categories
-       }
+       },
+       title:{
+         text: "Bitcoin Price",
+         style: {
+          fontSize:  '20px',
+          fontWeight:  'bold',
+          fontFamily:  'Helvetica',
+          color:  '#FFFFFF'
+        },
+       },fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'dark',
+          gradientToColors: [ '#facd05'],
+          shadeIntensity: 0,
+          type: 'horizontal',
+          opacityFrom: 1,
+          opacityTo: 1,
+          stops: [0, 100, 100, 100]
+        },
+       
+        
+      }
+       
+
+       
+       
      })
+     
      setSeries([
         {
        name: "Bitcoin Price",
-       data: series
+       data: series,
+       
         }
      ])
      setLoading(false);
@@ -66,7 +94,7 @@ function App() {
         CoinDesk API - BTC Price
            </div>
            <div style={{alignItems: "center", textAlign: "center", padding:15}}>
-           <img style={{animation: `spin ${speed}s linear infinite` }} src={bitcoin} alt="bitcoin" className="logo" width="150px" />;
+           <img style={{animation: `spin ${speed}s linear infinite` }} src={bitcoin} alt="bitcoin" className="logo" width="150px" />
            </div>
            
     {
@@ -105,7 +133,7 @@ function App() {
              
     </div>
     <div style={{display: "flex", justifyContent: "center", paddingBottom: "20px", margin: 0}}> 
-    <Chart options={chartData} series={series} type="line" height='400' width='800' /></div>
+    <Chart options={chartData} series={series} title='Bitcoin Price' type="line" colors="#F5AD11" height='400' width='800' /></div>
    </>
     )}
    </div>
