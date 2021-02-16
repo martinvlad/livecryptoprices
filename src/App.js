@@ -12,7 +12,7 @@ const options = [{value: "USD", text: "USD"},{value: "EUR", text: "EUR"},{value:
 function App() {
   
   const [priceData, setPriceData] = useState(null)
-  const [speed, setSpeed] = useState(5);
+  const [speed] = useState(5);
   const [currency, setCurrency] = useState("USD");
   const [chartData, setChartData] = useState(null);
   const [series, setSeries] = useState(null);
