@@ -3,8 +3,7 @@ import './App.css';
 import {Dimmer, Loader, Select, Card} from 'semantic-ui-react';
 import Chart from 'react-apexcharts';
 import 'semantic-ui-css/semantic.min.css'
-import Btc from './btc/Btc';
-import Usd from './btc/USD';
+
 import bitcoin from './bitcoin.png';
 
 const options = [{value: "USD", text: "USD"},{value: "EUR", text: "EUR"},{value: "GBP", text: "GBP"} ]
